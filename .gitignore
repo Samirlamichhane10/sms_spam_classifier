@@ -1,0 +1,17 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+env/
+venv/
+*.env
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+.vscode/

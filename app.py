@@ -3,17 +3,12 @@ import pickle
 import os
 from sms_preprocessing.preprocess import text_processing
 
-"""
-SMS Spam Classifier Application using Streamlit.
-
-This script allows users to input an SMS message and classifies it 
-as either 'Spam' or 'Ham' using a pre-trained model. The app also 
-features custom styling and a clean user interface.
-"""
 
 # Define the path to the saved model and vectorizer files
-model_path = os.path.join('saved_models', 'model.pkl')  # Path to the model file
-vectorizer_path = os.path.join('saved_models', 'vectorizer.pkl')  # Path to the vectorizer file
+# Path to the model file
+model_path = os.path.join('saved_models', 'model.pkl')
+# Path to the vectorizer file
+vectorizer_path = os.path.join('saved_models', 'vectorizer.pkl')
 
 # Apply custom CSS for the Streamlit app to improve the UI appearance
 st.markdown(
@@ -29,7 +24,7 @@ st.markdown(
 
         /* Customize the header title */
         h1 {
-            color: #333;
+            color: 	#ffffff;
             font-size: 2.5rem;
         }
     </style>
@@ -44,7 +39,8 @@ try:
 
     # Load the vectorizer used to transform input data
     with open(vectorizer_path, 'rb') as vectorizer_file:
-        tfv = pickle.load(vectorizer_file)  # Load the vectorizer (e.g., TF-IDF)
+        # Load the vectorizer (e.g., TF-IDF)
+        tfv = pickle.load(vectorizer_file)
 
     # Set the title of the app
     st.title("SMS SPAM CLASSIFIER")
@@ -54,12 +50,7 @@ try:
 
     # Button to trigger the classification
     if st.button('Check', type='primary'):
-        """
-        When the 'Check' button is clicked:
-        1. The input message is preprocessed using the `text_processing` function.
-        2. The processed message is vectorized using the preloaded vectorizer.
-        3. The pre-trained model predicts whether the message is spam or ham.
-        """
+      
 
         # Preprocess the SMS message using the custom text processing function
         preprocessed_msg = text_processing(sms)
@@ -68,7 +59,8 @@ try:
         vectorized_msg = tfv.transform([preprocessed_msg])
 
         # Use the model to predict the class (Spam or Ham)
-        predict = model.predict(vectorized_msg)[0]  # Get the predicted label (0 for Ham, 1 for Spam)
+        # Get the predicted label (0 for Ham, 1 for Spam)
+        predict = model.predict(vectorized_msg)[0]
 
         # Display the prediction result
         if predict == 1:
