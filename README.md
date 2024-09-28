@@ -11,7 +11,7 @@
 
 ## Introduction
 
-![Project Image](https://via.placeholder.com/1000x400)
+![Project Image](images/image2.png)
 
 The **SMS Spam Classifier** uses natural language processing techniques to classify SMS messages into "spam" or "ham" categories. The classifier is based on a Naive Bayes algorithm and the TF-IDF vectorization method. The project is deployed using Streamlit for an easy-to-use interface that allows users to input their own SMS messages and receive real-time predictions.
 
@@ -85,6 +85,14 @@ Before you begin, ensure you have the following installed on your machine:
 
 6. You can also use the `sample_sms.txt` file to test various sample messages.
 
+---
+## Project Images 
+
+![Project Image1](images/image1.png)
+![Project Image3](images/image3.png)
+
+
+---
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE) file for details.
