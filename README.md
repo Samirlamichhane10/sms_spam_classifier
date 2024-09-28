@@ -13,7 +13,7 @@
 
 ![Project Image](images/image2.png)
 
-The **SMS Spam Classifier** uses natural language processing techniques to classify SMS messages into "spam" or "ham" categories. The classifier is based on a Naive Bayes algorithm and the TF-IDF vectorization method. The project is deployed using Streamlit for an easy-to-use interface that allows users to input their own SMS messages and receive real-time predictions.
+The **SMS Spam Classifier** uses natural language processing techniques to classify SMS messages into "spam" or "ham" categories. The classifier is based on a Naive Bayes algorithm and the TF-IDF vectorization method. The project is deployed using Streamlit for an easy-to-use interface that allows users to input their own SMS messages and receive real-time predictions.[View Demo](https://samirlamichhane10-sms-spam-classifier-app-pg3ofi.streamlit.app/)
 
 
 ---
